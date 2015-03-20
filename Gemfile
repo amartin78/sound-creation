@@ -1,10 +1,66 @@
 source 'https://rubygems.org'
 
+# Dotenv
+gem 'dotenv-rails', :groups => [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
+gem 'brakeman', :require => false
+
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development do
+	gem 'sqlite3'
+	gem 'guard-spork'
+end
+
+group :test, :darwin do
+	gem 'rb-fsevent'
+end
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~>3.0.0'
+  gem 'factory_girl_rails', '~>4.0'
+  gem 'guard-rspec'
+  gem 'spork-rails'
+end
+
+# Chosen rails
+gem 'chosen-rails'
+
+
+# Byebug
+gem 'byebug'
+
+# Stripe
+gem 'stripe'
+
+# Dalli
+gem 'dalli'
+
+# Rollbar
+gem 'rollbar', '~>1.0.0'
+
+# Old gem protected_attributes
+gem 'protected_attributes'
+
+# Devise
+gem 'devise'
+
+# Gem cancancan
+gem 'cancancan', '1.9'
+
+# Gem rails_admin
+gem 'rails_admin'
+
+# Will-paginate
+gem 'will_paginate', '~>3.0'
+gem 'bootstrap-will_paginate', '~>0.0.10'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -25,14 +81,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
-
-group :development, :test do
-	gem 'sqlite3'
-end
-
-group :production do
-	gem 'pg'
-end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
