@@ -55,14 +55,14 @@ gem 'devise'
 gem 'cancancan', '1.9'
 
 # Gem rails_admin
-gem 'rails_admin'
+gem 'rails_admin', '0.6.7'
 
 # Will-paginate
 gem 'will_paginate', '~>3.0'
 gem 'bootstrap-will_paginate', '~>0.0.10'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 5.0.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
