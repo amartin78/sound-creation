@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
 
+  root 'pages#landing_page'
+
+  get 'about', to: 'pages#about'
+
+  get 'audio', to: 'pages#audio'
+
+  get 'video', to: 'pages#video'
+
+  get 'gallery', to: 'pages#gallery'
 
   # get 'pages/landing_page'
 
-  root 'pages#landing_page'
+  
 
 
 
