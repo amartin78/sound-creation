@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'pages/contact'
+
   root 'pages#landing_page'
 
   get 'about', to: 'pages#about'
@@ -9,6 +11,8 @@ Rails.application.routes.draw do
   get 'video', to: 'pages#video'
 
   get 'gallery', to: 'pages#gallery'
+
+  get 'contact', to: 'pages#contact'
 
   # get 'pages/landing_page'
 
