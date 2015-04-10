@@ -3,6 +3,13 @@
 		<div id="logo">
 			<p>Sound Creation</p>
 		</div>
+		<% flash.each do |key,value| %>
+			<% if key == "alert" %>
+				<div class="alert alert-danger message"><%= value %></div>
+			<% elsif key == "notice" %>
+				<div class="alert alert-success message"><%= value %></div>
+			<% end %>
+		<% end %>
 		<nav class="fixed">
 			<div class="nav-header">
 					<ul class="navbar">
