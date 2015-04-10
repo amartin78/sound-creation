@@ -28,3 +28,5 @@ module TheSoundCloud
     # config.i18n.default_locale = :de
   end
 end
+
+ActionMailer::Base.delivery_method = :smtp
