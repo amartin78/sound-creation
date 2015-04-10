@@ -1,33 +1,21 @@
 Rails.application.routes.draw do
 
-  get 'pages/contact'
-
+ 
   root 'pages#landing_page'
-
+  
   get 'about', to: 'pages#about'
-
-  get 'audio', to: 'pages#audio'
 
   get 'video', to: 'pages#video'
 
+  get 'audio', to: 'pages#audio'
+
   get 'gallery', to: 'pages#gallery'
 
-  get 'contact', to: 'pages#contact'
+  get 'form_in', to: 'contact#form_in'
 
-  # get 'pages/landing_page'
+  post 'form_out', to: 'contact#form_out'
 
   
-
-
-
-
-
-
-
-
-
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
