@@ -3,7 +3,7 @@
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 			<%= form_tag({controller: "contact", action: "form_out"}, method: "post", id: "contact-form") do %>
 				<h2>Send me a message</h2>
-				<p>If you have any questions or comments, contact me using the form below.</p>
+				<p>If you have any questions or comments, contact me using the form below. Otherwise, please call me on this number: +44 (0)740 2135 338</p>
 				<p><%= label_tag(:name, "Name") %></p>
 				<p><%= text_field_tag(:name, nil, {placeholder: "Full Name" })%></p>
 				<p>
