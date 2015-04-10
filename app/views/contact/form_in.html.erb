@@ -7,7 +7,7 @@
 				<p><%= label_tag(:name, "Name") %></p>
 				<p><%= text_field_tag(:name, nil, {placeholder: "Full Name" })%></p>
 				<p>
-					<select data-placeholder: "Choose a country..." class="chosen-select">
+					<select data-placeholder="Choose a country..." class="chosen-select">
 						<option value=""></option>
             <option value="United States">United States</option>
             <option value="United Kingdom">United Kingdom</option>
@@ -269,42 +269,8 @@
         <p><%= label_tag(:subject, "Subject") %></p>
         <p><%= text_field_tag(:subject, nil, {placeholder: "Issue"}) %></p>
         <p><%= label_tag(:message, "Message") %></p>
-        <p><%= text_area_tag(:message, nil, {size: "60 X 10", placeholder: "Some comments or questions..."}) %></p>
+        <p><%= text_area_tag(:message, nil, {size: "35 X 10", placeholder: "Some comments or questions..."}) %></p>
         <p><%= submit_tag("Submit", {class: 'btn btn-success'}) %></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 			<% end %>
 		</div>
 	</div>
