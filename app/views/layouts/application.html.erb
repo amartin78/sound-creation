@@ -26,11 +26,12 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 	</head>
-	<body>
+	<body data-spy="scroll" data-target=".navbar">
 		<%= render '/layouts/header' %>
 		<%= yield %>
 		<%= render '/layouts/footer' %>
-		<script>
+		<script type="text/javascript">
+      //lightbox
 			!function($){
 				$('.lightbox').magnificPopup({
 					delegate: 'a',
@@ -38,6 +39,17 @@
 					gallery: { enabled: true }
 				});
 			}(window.jQuery);
+      //smoth scrolling
+      var $root = $('html,body');
+      $('.navbar-nav a').click( function() {
+        var href = $.attr(this, 'href');
+        $root.animate({ 
+          scrollTop: $(href).offset().top 
+          }, 500, function(){ 
+            window.location.hash = href; 
+        });
+        return false;
+      });
 		</script>
 	</body>
 </html>
