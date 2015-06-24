@@ -3,6 +3,8 @@ Rails.application.routes.draw do
  
   root 'pages#landing_page'
   post 'form_out', to: 'contact#form_out'
+
+  get 'layouts', to: 'pages#layouts'
   
   # get 'about', to: 'pages#about'
 
