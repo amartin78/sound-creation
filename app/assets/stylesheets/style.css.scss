@@ -52,10 +52,6 @@ table {
 	margin: 0 auto;
 }
 
-#video1 h3 {
-	text-align: center;
-}
-
 #about {
 	/*margin: 20px auto;*/
 	/*background-color: rgba(220, 244, 251, 1);*/
@@ -66,11 +62,16 @@ table {
 	/*margin-bottom: 20px;*/
 	border-top: 1px solid #fff;
 	border-width: 55px;
-	padding-top: 15px;
+	padding-top: 25px;
+	padding-bottom: 15px;
 	margin-bottom: 40px;
 	/*background-color: rgba(183, 204, 219, 0.7);*/
 	background-color: rgba(232, 226, 214, 0.4);
 	/*background-color: #e8e2d6;*/
+}
+
+#video1 h3 {
+	text-align: center;
 }
 
 #video2 {
@@ -102,6 +103,9 @@ table {
 	/*background-color: rgba(183, 204, 219, 0.7);*/
 	background-color: rgba(232, 226, 214, 0.4);
 	margin-bottom: 40px;
+}
+#gallery h2 {
+	text-align: center;
 }
 
 #contact {
@@ -183,6 +187,12 @@ table {
 	float: right;
 }
 
+.grid-of-images {
+	/*margin-left: 45px;*/
+	width: 70%;
+	margin: 0 auto;
+}
+
 .grid-of-images a {
 	cursor:-webkit-zoom-in;
 	cursor:-moz-zoom-in;
@@ -190,7 +200,7 @@ table {
 	width: 100px;
 	height: 100px;
 	border: 0;
-	margin: 0 5px 5px 0;
+	margin: 0 10px 15px 0;
 	float: left;
 	display: block;
 }
