@@ -167,7 +167,7 @@
     </div><!-- .cold-xs-12 col-sm-7 -->
     <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
       <div class="responsive-container">
-        <iframe width="560" height="400" src="https://www.youtube.com/embed/hEeFNdFDIuo" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="400" src="//youtube.com/embed/hEeFNdFDIuo?VQ=HD720" frameborder="0" allowfullscreen></iframe>
       </div>
     </div><!-- .col-xs-12 col-md-3 -->
   </div><!-- .row feature --> 
@@ -257,7 +257,7 @@
           <a href="/images/9.gif" title="Caption 9"><img src="/images/_thumbs/9a.gif"></a>
           <a href="/images/10.gif" title="Caption 10"><img src="/images/_thumbs/10a.gif"></a>
           <a href="/images/11.gif" title="Caption 11"><img src="/images/_thumbs/11a.gif"></a>
-          <a href="/images/12.gif" title="Caption "><img src="/images/_thumbs/12a.gif"></a>
+          <a href="/images/12.gif" title="Caption 12"><img src="/images/_thumbs/12a.gif"></a>
         </div>
       </div>
     </div>
@@ -265,49 +265,35 @@
 </div><!-- .container -->
 
 <div class="container anchor" id="contact">
-  <h2>Contact</h2>
   <div class="row feature form">
-    
-
-
-
-
-      <%= form_tag({controller: "contact", action: "form_out"}, method: "post", id: "contact-form") do %>
-        <p>If you have any questions or comments, contact me using the form below. Otherwise, please call me on this number: +44 (0)740 2135 338</p>
-        
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+    <%= form_tag({controller: "contact", action: "form_out"}, method: "post", id: "contact-form") do %>
+      <h2>Contact</h2>
+      <p>If you have any questions or comments, contact me using the form below. Otherwise, please call me on this number: +44 (0)740 2135 338</p>
+      <div class="form-fields">
+        <div class="row feature">
+          <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6">
+            <p><%= label_tag(:name, "Name") %><br/>
+            <%= text_field_tag(:name, nil, {placeholder: "Full Name", size:57 })%></p>
+            <p><%= label_tag(:email, "Email") %><br/>
+            <%= text_field_tag(:email, nil, {placeholder: "Email address", size:57 }) %></p>
+          </div>
+          <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6">
+            <p><%= label_tag(:phone, "Phone") %><br/>
+            <%= text_field_tag(:phone, nil, {placeholder: "Phone", size:57}) %></p>
+            <p><%= label_tag(:subject, "Subject") %><br/>
+            <%= text_field_tag(:subject, nil, {placeholder: "Subject", size:57}) %></p>
+          </div>
         </div>
-
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-          <p><%= label_tag(:name, "Name") %><br/>
-          <%= text_field_tag(:name, nil, {placeholder: "Full Name" })%></p>
-          <p><%= label_tag(:email, "Email") %><br/>
-          <%= text_field_tag(:email, nil, {placeholder: "Email address"}) %></p>
+        <div class="row feature">
+          <div class="col-xs-12 col-sm- col-md-9 col-lg-9">
+            <p><%= label_tag(:message, "Message") %><br/>
+            <%= text_area_tag(:message, nil, {size: "119 X 40", placeholder: "Some comments or questions..."}) %></p>
+            <p><%= submit_tag("Send Message", {class: 'btn btn-success btn-md'}) %></p>
+          </div>
         </div>
-
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-          <p><%= label_tag(:company, "Company") %><br/>
-          <%= text_field_tag(:company, nil, {placeholder: "Company"}) %></p>
-          <p><%= label_tag(:phone, "Phone") %><br/>
-          <%= text_field_tag(:phone, nil, {placeholder: "Phone"}) %></p>
-        </div>
-
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-        </div>
-
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-          <p><%= label_tag(:message, "Message") %><br/>
-          <%= text_area_tag(:message, nil, {size: "35 X 10", placeholder: "Some comments or questions..."}) %></p>
-          <p><%= submit_tag("Submit", {class: 'btn btn-success'}) %></p>
-        </div>
-
-      <% end %>
-
-
-
-
-    </div>
-  </div>
+      </div>
+    <% end %>
+  </div><!-- .row -->
 </div><!-- .container -->
 
 
