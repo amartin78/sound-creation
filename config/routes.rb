@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post 'form_out', to: 'contact#form_out'
 
   get 'layouts', to: 'pages#layouts'
+  get 'profile1', to: 'pages#profile1'
   
   # get 'about', to: 'pages#about'
 

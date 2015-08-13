@@ -10,6 +10,7 @@ class ContactController < ApplicationController
   	flash[:notice] = "Thanks for your submission. I will contact you as soon as possible."
   	redirect_to :back
   end
+
 # miguelropu@gmail.com
 
 end
