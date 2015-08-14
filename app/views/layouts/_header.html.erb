@@ -9,42 +9,19 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-
-				<% if @profile %>
-					<div class="sound-creation">
-						<a href="/"><%= @name %></a>
-					</div><!-- .sound-creation -->
-				<% else %>
-					<div class="sound-creation">
-						<a href="/">Sound Creation</a>
-					</div><!-- .sound-creation -->
-				<% end %>
-
-
-
+				<div class="sound-creation">
+					<a href="/">Miguel Rodriguez</a>
+				</div><!-- .sound-creation -->
 			</div><!-- .navbar-header -->
-
-			<% if @profile==true %>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="#about-p">About</a>
-						<li><a href="#video1">Video</a>
-						<li><a href="#audio1">Audio</a>
-						<li><a href="#gallery">Gallery</a>
-						<li><a href="#contact">Contact</a>
-					</ul><!-- .nav -->
-				</div><!-- .navbar-collapse -->
-			<% else %>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="#about">About</a>
-						<li><a href="#profile">Team</a>
-					</ul><!-- .nav -->
-				</div><!-- .navbar-collapse -->
-			<% end %>
-
-
-
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#about-p">About</a>
+					<li><a href="#video1">Video</a>
+					<li><a href="#audio1">Audio</a>
+					<li><a href="#gallery">Gallery</a>
+					<li><a href="#contact">Contact</a>
+				</ul><!-- .nav -->
+			</div><!-- .navbar-collapse -->
 		</div><!-- .container-fluid -->
 	</div><!-- navbar ends here -->
 	<div class="container">
@@ -56,7 +33,7 @@
 					<div class="alert alert-success message"><%= value %></div>
 				<% end %>
 			<% end %>
-		</div>
+		</div><!-- .flash-message -->
 	</div><!-- .container -->
 	<div class="container-fluid">
 		<div data-ride="carousel" class="carousel slide" id="myCarousel">
